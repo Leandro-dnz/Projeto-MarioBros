@@ -1,0 +1,261 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+#body {
+  background-color: #fefefe;
+}
+
+.trave1 {
+  height: 50px;
+  width: 250px;
+  border-radius: 40px;
+  background-color: #a25e31;
+  margin-left: 240px;
+  margin-top: 150px;
+  position: absolute;
+  cursor: none;
+}
+
+.trave2 {
+  height: 50px;
+  width: 250px;
+  border-radius: 40px;
+  background-color: #a25e31;
+  margin-left: 10px;
+  margin-top: 400px;
+  position: absolute;
+  cursor: none;
+}
+
+.circulo4 {
+  height: 120px;
+  width: 100px;
+  /*background-color: white;*/
+  background-repeat: no-repeat;
+  margin-left: 340px;
+  margin-top: 30px;
+  position: absolute;
+  cursor: none;
+}
+.circulo4:hover {
+  height: 120px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-image: url(../Img/mario1.jpg);
+  cursor: none;
+}
+.circulo5 {
+  height: 120px;
+  width: 100px;
+  /*background-color: white;*/
+  background-repeat: no-repeat;
+  margin-left: 100px;
+  margin-top: 290px;
+  position: absolute;
+  cursor: none;
+}
+.circulo5:hover {
+  height: 120px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-image: url(../Img/mario3.jpg);
+  cursor: none;
+}
+.circulo6 {
+  height: 120px;
+  width: 100px;
+  /*background-color: white;*/
+
+  background-repeat: no-repeat;
+  margin-left: 480px;
+  margin-top: 480px;
+  position: absolute;
+  cursor: none;
+}
+.circulo6:hover {
+  height: 120px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-image: url(../Img/mario2.jpg);
+  cursor: none;
+}
+.circulo7 {
+  height: 120px;
+  width: 100px;
+  /*background-color: white;*/
+
+  background-repeat: no-repeat;
+  margin-left: 210px;
+  margin-top: 690px;
+  position: absolute;
+  cursor: none;
+}
+.circulo7:hover {
+  height: 120px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-image: url(../Img/mario4.jpg);
+  cursor: none;
+}
+
+.trave8 {
+  height: 50px;
+  width: 250px;
+  border-radius: 100px;
+  background-color: #a25e31;
+  margin-left: 390px;
+  margin-top: 590px;
+  position: absolute;
+  cursor: none;
+}
+
+.trave9 {
+  height: 50px;
+  width: 250px;
+  border-radius: 100px;
+  background-color: #a25e31;
+  margin-left: 130px;
+  margin-top: 800px;
+  position: absolute;
+  cursor: none;
+}
+/**estilo2**/
+
+/*Reset*/
+
+html,
+body {
+  font-family: sans-serif;
+  background-color: #fefefe;
+}
+h2 {
+  margin-left: 250px;
+  margin-top: 50px;
+}
+hr {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  opacity: 0.2;
+}
+div {
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section {
+  display: flex;
+  flex-direction: row;
+}
+/* end reset*/
+
+/*color*/
+
+.item,
+.quadrado {
+  background: url(../Img/mario.png) no-repeat;
+}
+
+/**Animation Fade**/
+.item {
+  width: 100px;
+  height: 100px;
+}
+.item:hover {
+  animation-play-state: paused;
+}
+.animationFadeIn {
+  animation: fadeIn 2s linear;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.animationFadeOut {
+  animation: fadeIn 2s linear;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+}
+.animationFadeInFadeOut {
+  animation: fadeInFadeOut 2s linear infinite;
+}
+@keyframes fadeInFadeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.spinner {
+  border-radius: 50%;
+}
+@keyframes rotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+.animationSpinner {
+  animation: rotate 2s linear infinite;
+}
+.animationSpinnerEase {
+  animation: rotate 2s ease infinite;
+}
+.animationSpinnerEaseOut {
+  animation: rotate 2s ease-out infinite;
+}
+
+/**AnimationPosition**/
+.positionBox {
+  width: 300px;
+  height: 300px;
+  background-color: rgb(247, 239, 239);
+  position: relative;
+  border-radius: 40px;
+  margin-left: 200px;
+  margin-top: 100px;
+}
+.animationPosition {
+  position: absolute;
+  animation: position 4s linear infinite;
+  animation-direction: alternate;
+}
+@keyframes position {
+  0% {
+    top: 0;
+    right: 0;
+  }
+  35% {
+    top: 0;
+    right: calc(100% - 100px);
+  }
+  50% {
+    top: calc(100% - 100px);
+
+    right: calc(100% - 100px);
+  }
+  50% {
+    top: calc(100% - 100px);
+    right: calc(100% - 100px);
+  }
+  85% {
+    top: calc(100% - 100px);
+    right: 0;
+  }
+  100% {
+    top: 0;
+    right: 0;
+  }
+}
